@@ -1,0 +1,98 @@
+<html lang='en'>
+<head>
+  <style>
+    .top-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 10px;
+    }
+    .top-right a, .top-right img {
+      margin-right:10px;
+    }
+    .center {
+      width: 75%;
+      margin: 100px auto;
+      text-align: center;
+    }
+    .hp-delamere {
+      font-size: 70px;
+    }
+    .blue {
+      color: blue;
+    }
+    .red {
+       color: red;
+    }
+    .green {
+       color: green;
+    }
+    .orange {
+       color: orange;
+    }
+    .input {
+      border-radius: 17px;
+      min-width: 100px;
+      width: 70%;
+      padding: 10px;
+    }
+    .button {
+      margin: 10px;
+    }
+    img {
+      max-width: 40px;
+      max-height: 40px;
+      width: 10px;
+      height: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class='top-right'>
+  <a href='https://mail.google.com'>Gmail</a>
+  <a href='https://images.google.com'>Images</a>
+  <img src='austin.png'/>
+  <img src='austin.png'/>
+</div>
+
+<div class='center'>
+  <p class='hp-delamere'>
+    <span class='blue'>G</span>
+    <span class='red'>o</span>
+    <span class='orange'>o</span>
+    <span class='blue'>g</span>
+    <span class='green'>l</span>
+    <span class='red'>e</span>
+  </p>
+</div>
+
+<div class='center'>
+  <img src='austin.png'/>
+    <form id='form'>
+      <input class='input' id='unatafuta-nini'/>
+    </form>
+  <img src='austin.png'/>
+  <img src='austin.png'/>
+  <button class='button' id='search'>Google search</button>
+  <button class='button'>Feeling lucky</button>
+  <p>Google offered in: <a href='https://kiswahili.ku.edu/'>Kiswahili</a></p>
+</div>
+</div>
+  <script>
+   const form = document.getElementById('form');
+   const yoghurt = document.getElementById('search');
+   const natafuta = document.getElementById('unatafuta-nini');
+   form.addEventListener('submit', search);
+   yoghurt.addEventListener('click', samsung);
+   function samsung(value) {
+     //alert('natafuta: ' + natafuta.value || value);
+     window.location.replace('https://www.google.com/search?q=' + natafuta.value || value);
+   }
+   function search(e, value) {
+     e.preventDefault();
+     samsung(value)
+   }
+  </script>
+</body>
+</html>
